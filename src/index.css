@@ -1,0 +1,136 @@
+:root {
+  --white: #ffffff;
+  --black: #000000;
+  --map-area-gradient-start: #0f0923;
+  --map-area-gradient-end: #150836;
+  --node-gradient-start: #45138d;
+  --node-gradient-end: #ba10d0;
+  --draggable-node-background: #1c2536;
+}
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--black);
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.react-flow-wrapper {
+  width: 100vw;
+  height: 75vh;
+}
+
+.react-flow-main {
+  background: linear-gradient(var(--map-area-gradient-start), var(--map-area-gradient-end));
+}
+
+input,
+textarea {
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  width: 90%;
+}
+
+input:focus-visible,
+textarea:focus-visible {
+  outline: none;
+}
+
+select {
+  padding: 10px;
+  padding-right: 20px;
+  border-radius: 10px;
+  border: none;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  background-color: var(--white);
+  width: 100%;
+}
+
+option {
+  border-radius: 10px;
+}
+
+select:focus-visible {
+  outline: none;
+}
+
+.node-title {
+  font-size: 24px;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 10px;
+}
+
+.base-node {
+  width: 200px;
+  border: 1px solid var(--white);
+  border-radius: 10px;
+  background: linear-gradient(45deg, var(--node-gradient-start), var(--node-gradient-end));
+  padding: 20px;
+  color: var(--white);
+}
+
+.llm-text {
+  margin-bottom: 10px;
+}
+
+.submit-btn-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.submit-button {
+  margin: 10px;
+  padding: 10px;
+  background-color: var(--draggable-node-background);
+  border: 1px solid transparent;
+  border-radius: 10px;
+  color: var(--white);
+  font-size: 24px;
+}
+
+.draggable-node {
+  cursor: grab;
+  min-width: 80px;
+  max-width: fit-content;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  border-radius: 8px;
+  background-color: var(--draggable-node-background);
+  justify-content: center;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.toolbar-container {
+  padding: 10px;
+}
+
+.toolbar {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.text-node-text-field {
+  width: 100%;
+  max-height: 300px;
+  overflow-y: auto;
+  resize: none;
+  box-sizing: border-box;
+}
